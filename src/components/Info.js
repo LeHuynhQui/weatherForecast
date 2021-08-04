@@ -180,7 +180,7 @@ export default function Info() {
 
         const outputDate = `${day} ${month} ${date}, ${year} ${hour}:${minute}:${second}`
 
-        const src = `http://openweathermap.org/img/wn/${weatherToday.weather[0].icon}@2x.png`
+        const src = `https://openweathermap.org/img/wn/${weatherToday.weather[0].icon}@2x.png`
         return (
             <div className="col-3 d-flex align-items-center justify-content-center h-100 w-100">
                 <div className="text-center">
@@ -188,7 +188,7 @@ export default function Info() {
                         <input name= "cityName" className="form-control h-100" placeholder="Your City" onChange={handleChange}/>
                         <i className="fas fa-search-location position-absolute" onClick={changeLocation}/>
                     </div>
-                    <h2 className="city">{weatherToday.name}</h2>
+                    <h1 className="city">{weatherToday.name}</h1>
                     <div className="date text-muted">{outputDate}</div>
                     <div className="mb-5 pb-5">
                         <div className="temp  d-flex flex-column align-items-center justify-content-between">

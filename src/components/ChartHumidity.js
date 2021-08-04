@@ -51,7 +51,7 @@ export default function ChartHumidity() {
 
     let series = [
         {
-            name: "TEMPERATURE",
+            name: "HUMIDITY",
             data: mangHumi
         }
     ]
