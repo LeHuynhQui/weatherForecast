@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="208" height="50" viewBox="0 0 208 50">
+  <defs>
+    <clipPath id="clip-Web_1920_1">
+      <rect width="208" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="Web_1920_1" data-name="Web 1920 – 1" clip-path="url(#clip-Web_1920_1)">
+    <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(5 2)" fill="rgba(255,255,255,0)" stroke="#0f141e" stroke-width="2">
+      <circle cx="23" cy="23" r="23" stroke="none"/>
+      <circle cx="23" cy="23" r="22" fill="none"/>
+    </g>
+    <text id="W" transform="translate(15 14)" fill="#0f141e" font-size="27" font-family="Helvetica-Bold, Helvetica" font-weight="700"><tspan x="0" y="21">W</tspan></text>
+    <text id="the_weather" data-name="the weather" transform="translate(58 7)" fill="#0f141e" font-size="23" font-family="Helvetica-Bold, Helvetica" font-weight="700" letter-spacing="0.08em"><tspan x="0" y="18">the weather</tspan></text>
+    <text id="weather_forecast" data-name="weather forecast" transform="translate(59 34)" fill="#0f141e" font-size="10" font-family="Helvetica" letter-spacing="0.465em"><tspan x="0" y="8">weather forecast</tspan></text>
+  </g>
+</svg>
