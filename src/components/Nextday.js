@@ -41,7 +41,7 @@ export default function Nextday() {
             const monthLetter = monthNames[DATE.getMonth()]
             const dateText = `${date} ${monthLetter}`
 
-            const src =`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
+            const src =`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
 
             return (
                 <div className={index===0 ? "item today glass text-center" : "item glass text-center"} key={index}>
