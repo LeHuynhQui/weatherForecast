@@ -170,7 +170,7 @@ h2 {
 }
 
 .nav-link {
-  color: #53595f!important;
+  color: #0f141e!important;
   font-size: 2rem;
 }
 
@@ -238,4 +238,28 @@ h2 {
 
 .glassLocation button:hover {
   border-color: #5694f6;
+}
+
+.loading-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  background-color: #33485f;
+}
+
+
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 10000000;
+  background-color: #33485f;
+
+}
+
+.loading img {
+  width: 25%;
 }
