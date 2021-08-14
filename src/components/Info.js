@@ -5,6 +5,8 @@ import { weatherServices} from "./../services/WeatherServices"
 
 export default function Info() {
 
+    let {getCityName} = useSelector(state => state.WeatherReducer)
+
     let [cityName, setCityName] = useState ("London")
 
     const dispatch = useDispatch();
@@ -18,7 +20,7 @@ export default function Info() {
     }
 
     useEffect(() => {
-        weatherServices.getWeatherToday("london")
+        weatherServices.getWeatherToday(getCityName)
         .then(result => {
             // setCityName(cityName = result.data.name)
             dispatch({
@@ -44,7 +46,7 @@ export default function Info() {
             })
         });
 
-        weatherServices.getWeatherNextDays("london")
+        weatherServices.getWeatherNextDays(getCityName)
             .then(result => {
                 dispatch({
                     type: "GET_DATA_NEXT_DAYS",
@@ -69,7 +71,7 @@ export default function Info() {
                 })
             })
             // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[])
+    },[getCityName])
 
 
 
@@ -182,14 +184,14 @@ export default function Info() {
 
         const src = `https://openweathermap.org/img/wn/${weatherToday.weather[0].icon}@2x.png`
         return (
-            <div className="col-3 d-flex align-items-center justify-content-center h-100 w-100">
+            <div className="col-3 d-flex align-items-start justify-content-center h-100 w-100">
                 <div className="text-center">
                     <div className="form-group d-flex align-items-center pb-5 mb-5 position-relative">
                         <input name= "cityName" className="form-control h-100" placeholder="Your City" onChange={handleChange}/>
                         <i className="fas fa-search-location position-absolute" onClick={changeLocation}/>
                     </div>
                     <h1 className="city">{weatherToday.name}</h1>
-                    <div className="date text-muted">{outputDate}</div>
+                    <div className="date ">{outputDate}</div>
                     <div className="mb-5 pb-5">
                         <div className="temp  d-flex flex-column align-items-center justify-content-between">
                             <img src={src} width={150} alt="icon"/>
@@ -199,11 +201,11 @@ export default function Info() {
                     </div>
                     <div className="more-info d-flex justify-content-between">
                         <div className="humidity">
-                            <h3 className="text-muted mb-5">Humidity</h3>
+                            <h3 className=" mb-5">Humidity</h3>
                             <h2 className="humi">{weatherToday.main.humidity}%</h2>
                         </div>
                         <div className="wind">
-                            <h3 className="text-muted mb-5">Wind speed</h3>
+                            <h3 className=" mb-5">Wind speed</h3>
                             <h2 className="windSpeed">{Math.round(weatherToday.wind.speed * 3.6)}km/h</h2>
                         </div>
                     </div>

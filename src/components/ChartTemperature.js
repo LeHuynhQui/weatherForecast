@@ -80,7 +80,7 @@ export default function ChartTemperature() {
             align: 'left'
         },
         subtitle: {
-            text: 'Comparison data at 12:00:00 on each day',
+            text: `Comparison data at same time on each day`,
             align: 'left'
         },
         yaxis: {
@@ -99,7 +99,7 @@ export default function ChartTemperature() {
             { weatherNextDays ? <Chart
                 options={options}
                 series={series}
-                height={350}
+                height={300}
             /> : ""}
         </Fragment>
     )

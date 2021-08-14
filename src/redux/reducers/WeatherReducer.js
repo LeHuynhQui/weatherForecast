@@ -1,7 +1,9 @@
 const initialState = {
     weatherToday: null,
     weatherNextDays: null,
-    isError: false
+    isError: false,
+    isAllow: false,
+    getCityName : "London"
 }
 
 export const WeatherReducer = (state = initialState, action) => {
@@ -29,6 +31,18 @@ export const WeatherReducer = (state = initialState, action) => {
             return { ...state}
         }
 
+        case "ALLOW": {
+            state.isAllow = action.isAllow
+            return { ...state}
+        }
+
+        case "CITY_NAME": {
+            state.getCityName = action.cityName
+            return { ...state}
+
+        }
+        
+        
         default: {
             return { ...state}
         }

@@ -8,10 +8,6 @@ export default function Nextday() {
     const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-
-
-
-
     let mangWeather = [];
 
 
@@ -22,8 +18,7 @@ export default function Nextday() {
     if (weatherNextDays) {
 
         weatherNextDays.list.map((weather, index) => {
-
-            if (weather.dt_txt.slice(11) === "12:00:00") {
+            if (weather.dt_txt.slice(11) === weatherNextDays.list[0].dt_txt.slice(11)) {
                 mangWeather.push(weather)
 
             }

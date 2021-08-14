@@ -1,18 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useSelector } from 'react-redux';
 
 export default function AlertCannotReadLocation() {
+    let { isAllow } = useSelector(state => state.WeatherReducer)
 
-    let [isShow, setIsShow] = useState(true)
-
-
-    setTimeout(() => {
-        setIsShow(isShow = false)
-    }, 5000);
-
+    const render = () => {
+        return (
+            <div className={isAllow ? "alert-error alert-warning show" : "alert-error alert-warning"}>
+                <h3 className="m-0"><i className="far fa-times-circle" /> Can not read your location. The dafault location should be <b>London</b></h3>
+            </div>
+        )
+    }
 
     return (
-        <div className={isShow ? "alert-error alert-warning show" : "alert-error alert-warning"}>
-            <h3 className="m-0"><i className="far fa-times-circle" /> Can not read your location. The dafault location should be <b>London</b></h3>
+        <div>
+            {isAllow ? render() : ""}
         </div>
     )
 }
